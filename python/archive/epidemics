@@ -1,0 +1,12 @@
+"""Main script with input."""
+from sys import stdin, stdout
+population, infection_rate, death_rate = stdin.readline().split()
+population = int(population)
+infection_rate = float(infection_rate)
+death_rate = float(death_rate)
+#
+stdout.write(f'{population} ' + str(infection_rate) + f' {death_rate}' + '\n')
+##
+infected = population * infection_rate
+deaths = infected * death_rate
+stdout.write(f'{population:,} ' + f'{int(infected * 10)}% ' + f'{int(deaths):,}' + '\n')
